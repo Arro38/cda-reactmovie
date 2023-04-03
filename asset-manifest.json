@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/cda-reactmovie/static/css/main.c643ac07.css",
+    "main.js": "/cda-reactmovie/static/js/main.2fcd9a4b.js",
+    "index.html": "/cda-reactmovie/index.html",
+    "main.c643ac07.css.map": "/cda-reactmovie/static/css/main.c643ac07.css.map",
+    "main.2fcd9a4b.js.map": "/cda-reactmovie/static/js/main.2fcd9a4b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c643ac07.css",
+    "static/js/main.2fcd9a4b.js"
+  ]
+}
