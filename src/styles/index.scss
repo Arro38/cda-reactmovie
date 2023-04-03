@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: black;
+  color: white;
+}
+li {
+  list-style: none;
+}
+
+@mixin verticalCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app {
+  @include verticalCenter;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  .navigation {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    ul {
+      display: flex;
+
+      li {
+        margin-right: 10px;
+        list-style: none;
+        a {
+          text-decoration: none;
+          font-size: 20px;
+          font-weight: 600;
+          color: white;
+          &.active {
+            color: teal;
+          }
+        }
+      }
+    }
+  }
+  .form-container {
+    @include verticalCenter;
+    flex-direction: column;
+    input {
+      padding: 10px;
+
+      margin: 10px;
+    }
+    button {
+      padding: 10px;
+      margin: 10px;
+      background-color: teal;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 20px;
+    margin: 20px;
+    .card {
+      border: 4px solid teal;
+
+      padding: 10px;
+      position: relative;
+      img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+      }
+      .synopsis {
+        padding-bottom: 20px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+        overflow: hidden;
+      }
+      .likeIcon {
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        font-size: 2rem;
+        color: teal;
+        &:hover {
+          color: black;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
